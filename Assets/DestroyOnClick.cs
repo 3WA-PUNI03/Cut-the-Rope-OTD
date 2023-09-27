@@ -11,7 +11,7 @@ public class DestroyOnClick : MonoBehaviour, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("over");
-        if(_mouse.action.IsPressed())
+        //if(_mouse.action.IsPressed())
         {
             Destroy(gameObject);
         }
