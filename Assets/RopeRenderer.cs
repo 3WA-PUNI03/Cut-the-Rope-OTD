@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RopeRenderer : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class RopeRenderer : MonoBehaviour
         // On parcoure la liste de maillon du rope generator et on fourni au line renderer la position de chaque maillon
         for (int i = 0; i < _ropeGenerator.Rope.Count; i++)
         {
+            if(_ropeGenerator.Rope[i] == null)
+            {
+                _lineRenderer.positionCount = i+1;
+                return;
+            }
+
             _lineRenderer.SetPosition(i+1, _ropeGenerator.Rope[i].transform.position);
         }
 
