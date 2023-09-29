@@ -14,6 +14,10 @@ public class RopeGenerator : MonoBehaviour
 
     [SerializeField] List<GameObject> _rope;
 
+    public List<GameObject> Rope { get => _rope; }
+    public Rigidbody2D Anchor { get => _anchor; }
+    public Transform Candy { get => _candy; }
+
     private void Start()
     {
         // Représente une portion de la corde

@@ -33,7 +33,6 @@ public class EatCandy : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(_nextSceneName);
     }
 
 
